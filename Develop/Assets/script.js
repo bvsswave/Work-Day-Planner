@@ -41,12 +41,32 @@ function timeBlockColor() {
             $(this).addClass("past");
         }
     })
+};
+
+// WHEN I click into a time block
+saveBtn.on("click", function() {
+
+    var time = $(this).siblings(".hour").text();
+    var plan = $(this).sibling("plan").val();
+    
+// THEN I can enter an event
+    localStorage.setItem(time, plan);  
+});
+
+// WHEN I refresh the page
+// THEN the saved events persist
+
+function usePlanner() {
+    $(".hour").each(function() {
+        var currHour = $(this).text();
+        var currPlan = localStorage.getItem(currHour);
+
+        if(currPlan !== null) {
+            $(this).siblings(".plan").val(currPlan);
+        }
+    });
 }
 
 
-
-
-
-$(".time-block").each(function() {
-
-}
+timeBlockColor();
+usePlanner();
