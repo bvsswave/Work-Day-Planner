@@ -13,4 +13,4 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist   
 
-![alt text](Screen Shot 2022-02-21 at 8.14.33 PM.png)
+<img width="1219" alt="Screen Shot 2022-02-21 at 8 14 33 PM" src="https://user-images.githubusercontent.com/89813860/155056858-1de1b9ed-4f98-4332-8408-a80df2c14ad6.png">
