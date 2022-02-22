@@ -1,0 +1,3 @@
+$(".time-block").each(function() {
+
+}
